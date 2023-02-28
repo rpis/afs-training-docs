@@ -1,20 +1,25 @@
 ### Ćwiczenie 3 - App Service i bezpieczeństwo wewnątrz infrastruktury
 
-1. Zainstalujmy azure cli, bedzie potrzny w dalszej czesci
+1. Zainstaluj azure cli, bedzie potrzeny w dalszej cześci
+   
     ```
         curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
     ```
+
     Potwierdz instalacje!
 2. W ćwiczeniu wykorzytamy tożaszmośc developerską stworzoną w cwiczeniu 3 dla funkcji, zatem ustaw zmienne środowiskowe
+   
     ```
         export AZURE_CLIENT_ID=YOUR_CLIENT_ID
         export AZURE_TENANT_ID=YOUR_TENANT_ID
         export AZURE_CLIENT_SECRET=YOUR_CLIENT_SECRET
 
     ```
-3. ustaw również zmienną COSMOSDB_CONNECTION_STRING
-4. Ustawmy prawa do korzystania z cosmosdb przez tożsamość developerską za pomoca azure cli
-   1. Dodajmy plik z definicją roli w pliku role.json jak poniżej:
+
+3. Ustaw również zmienną COSMOSDB_CONNECTION_STRING
+4. Ustaw prawa do korzystania z cosmosdb przez tożsamość developerską za pomoca azure cli
+   1. Dodaj plik z definicją roli w pliku o nazwie role.json jak poniżej:
+       
         ```
             {
                 "RoleName": "Training Role",
@@ -29,7 +34,9 @@
                 }]
             }
         ```
-    3. Logujemy się do azure cli za pomocą komendy "az login --use-device-code", po zalogowaniu (w przeglądarce) uzyskujemy:
+
+    2. Zaloguj się do azure cli za pomocą komendy "az login --use-device-code", po zalogowaniu (w przeglądarce) uzyskujemy:
+    3. 
         ```
             [
             {
@@ -48,28 +55,28 @@
             }
             ]
         ```
-   4. Ustawiamy zmienne jak poniżej i wykonujemy w kolejnosci instrukcje
+   2. Ustaw zmienne jak poniżej i wykonujemy w kolejnosci instrukcje
    
-       1. ustawiamy nazwe naszej resource grypy w której utworzyliśmy cosmos db
+       1. Ustaw nazwe naszej resource grupy w której utworzyliśmy cosmos db
    
             ```
                 resourceGroupName=afs-app-service
             ```
 
-       2. ustawiamy nazwe naszego cosmos db
+       2. Ustaw nazwe naszego cosmos db
    
         ```
             accountName=afs-app-service
         ```
 
-       3. Tworzymy role za pomocą:
+       3. Utwórz role za pomocą:
    
         ```
             az cosmosdb sql role definition create --account-name $accountName --resource-group $resourceGroupName --body @role.json
 
         ```
 
-        Powinniśmy uzyskać dopowiedz zbliżenje zawartości:
+        Uzyskasz dopowiedz zbliżenje zawartości:
 
         ```
             {
@@ -95,25 +102,25 @@
             }
         ```
 
-     4. Ustawiamy zmienna okresjąca roleId, na podstawie pola name z poprzedniej odpowiedzi
+     1. Ustaw zmienna określająca roleId, na podstawie pola name z poprzedniej odpowiedzi
    
         ```
             roleId=0c5f9175-0b18-4c09-98da-a4f914c6777f
         ```
 
-     5. Ustawiamy identyfikator konta, dla którego będziemy dodawać role:
+     2. Ustaw identyfikator konta, dla którego będziemy dodawać role:
         
         ```
             principalId=91a730b1-1c7e-4f40-956b-9bd7108e1bf1
         ```
 
-    6. Dodajemy role do zdefiniwanego konta
+    3. Dodaj role do zdefiniowanego konta
         
         ```
             az cosmosdb sql role assignment create --account-name $accountName --resource-group $resourceGroupName --scope "/" --principal-id $principalId --role-definition-id $roleId 
         ```
 
-        W odpowiedzi powinnośmy otrzymać:
+        W odpowiedzi otrzymasz:
         
         ```
             {
@@ -127,7 +134,7 @@
             }
         ```
 
-5. Dodajmy bibliteke do obsługi uwierzytelnienia, wykonaj w terminalu:
+5. Dodaj bibliteke do obsługi uwierzytelnienia, wykonaj w terminalu:
        
     ```
        npm install @azure/identity
@@ -207,9 +214,9 @@
         });
    ```
 
-7. Uruchamiamy kod lokalnie i sprawdzamy poprawność działania
+7. Uruchom kod lokalnie i sprawdź poprawność działania
 8.  Wdróż na Azure i sprawdz czy działa i jaki uzyskamy komunikat błędu.
-9.  Uaktywnijmy System assigned w swoim App Service (ustaw na ON i zapisz). Po zapisie zobaczysz Principal ID
+9.  Uaktywnij System assigned w swoim App Service (ustaw na ON i zapisz). Po zapisie zobaczysz Principal ID
 10. Dodaj utworzoną grupe do powyższego principala, jeżeli nie zamykałeś codespace to możesz ustawić principalId=[YOUR PRINCIPAL ID] i wykonać:
        
         ```
@@ -217,4 +224,4 @@
         ```
 
 11. Zmien COSMOSDB_CONNECTION_STRING w "Application Settings"
-12. Wykonaj restart App Service i sprawdz działanie
+12. Wykonaj restart App Service i sprawdź działanie

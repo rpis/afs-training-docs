@@ -24,7 +24,7 @@
         });
 
     ```
-5. Uruchoma server lokalnie komenda:
+5. Uruchom server lokalnie komenda:
     ```
     node index.js
     ```
@@ -37,17 +37,17 @@
         get {{baseUrl}}
 
     ```
-8. Utwórzmy app service korzysystając z palety.
+8. Utwórz app service korzystając z palety.
    1. Otwórz palete i wybierz Create New Web App
-   2.  Zaloguje się do azure 
-   3.  Wybierz subskrypcję
-   4.  Nadaj unikalna nazwę tworzonemu app service
-   5.  Wybierz runtime - NodeJS 18 LTS
-   6.  Wybierz pricing tier Free(F1)
-   7.  Poczekaj na utworzenie
+   2. Zaloguje się do azure 
+   3. Wybierz subskrypcję
+   4. Nadaj unikalna nazwę tworzonemu app service
+   5. Wybierz runtime - NodeJS 18 LTS
+   6. Wybierz pricing tier Free(F1)
+   7. Poczekaj na utworzenie
 
        Uwaga: Jeżeli chcesz możesz parametryzować wiecej wybierając Create New Web App Advanced
-9. Zanim przystapimy do wdrażania musimy w pliku package.json dodać domyślny skrypt start, plik powinien mieć taką zawartość (bez niepotrzebnych w tym momencie danych danych)
+9. Zanim przystąpisz do wdrażania musisz w pliku package.json dodać domyślny skrypt start, plik powinien mieć taką zawartość (bez niepotrzebnych w tym momencie danych danych)
 
     ```
         {
@@ -63,13 +63,13 @@
     ```
     
 
-10. Wdróż apliokację na utworzony app service
+10. Wdróż aplikację na utworzony app service
     1.  Otwórz rozszerzenie dla Azure (sponsorem jest literka A)
     2.  Znajdz w zasobach swój app service
     3.  Z menu na nim wybierz "Deploy to the Web App", możesz obserwować proces wybierając zakładkę dane wyjściowe
     4.  Znajdz adres swojego app service i sprawdz działanie aplikacji
 
-11. Zmienimy nasz kod na:
+11. Zmień swój kod na:
     ```
         const http = require("http");
         const port = process.env.PORT || 3000

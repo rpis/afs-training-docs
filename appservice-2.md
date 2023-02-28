@@ -1,19 +1,20 @@
 ### Ćwiczenie 2 - wykorzytanie bazy Cosmos DB
 
-1. Założenie bazy danych cosmodb
+1. Załóż bazę danych cosmodb
    1. W eksporatorze Azure znajdź "Azure Cosmos DB" i wybierz "Create Server" i w kolejnych krokach
    2. Wybierz Core(SQL)
    3. Nazwij swoją bazę danych
    4. Wybierz Serverless
    5. Wybierz Resource Group lub utwórz nową
    6. Wybierz lokalizację dla tworzonej bazy
-   7. Zobacz utworzoną nazę w eksploratorze oraz w portalu
+   7. Zobacz utworzoną nazwę w eksploratorze oraz w portalu
  
-2. Zainstalug bibliotekę do cosmos db
+2. Zainstaluj bibliotekę do cosmos db
 
     ```
         npm install @azure/cosmos
     ```
+    
 3. Zmień kod dla index.js na:
    
    ```
