@@ -1,4 +1,4 @@
-### Cwiczenie 1 - uruchomienie prostego App Service
+### Ćwiczenie 1 - uruchomienie prostego App Service
 1. Utwórz nowe repozytorium oraz środowisko codespaces [jak?](environment.md)
 2. Uruchom środowisko
 3.  Zainicjuj projekt poniższą komendą, potwierdzając ustawienia jako domyslne enterem lub zmieniając, finalnie potwierdz yes

@@ -1,4 +1,4 @@
-### Cwiczenie 2 - wykorzytanie bazy Cosmos DB
+### Ćwiczenie 2 - wykorzytanie bazy Cosmos DB
 
 1. Założenie bazy danych cosmodb
    1. W eksporatorze Azure znajdź "Azure Cosmos DB" i wybierz "Create Server" i w kolejnych krokach

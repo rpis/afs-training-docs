@@ -1,4 +1,4 @@
-### Cwicenie 3 - funkApp Service i bezpieczeństwo wewnątrz infrastruktury
+### Ćwiczenie 3 - App Service i bezpieczeństwo wewnątrz infrastruktury
 
 1. Zainstalujmy azure cli, bedzie potrzny w dalszej czesci
     ```

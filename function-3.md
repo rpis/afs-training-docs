@@ -1,8 +1,8 @@
-### Cwicenie 3 - funkcje i bezpieczeństwo wewnątrz infrastruktury
+### Ćwiczenie 3 - funkcje i bezpieczeństwo wewnątrz infrastruktury
 
 1. Stwórzmy tożsamość developerską, aby móc wykorzytać "System Identity" w naszym środowisku
    1. W konsoli Azure znajdz Azure Active Directory i otwórz
-   2. Wybierz "App registratios", zostanie przedstawiona lista zedfiniowanych aplikacji
+   2. Wybierz "App registrations", zostanie przedstawiona lista zedfiniowanych aplikacji
    3. Wybierz "New registration", nadaj swoja nazwę aplikacji i zarejestruj, nie musisz uzupełniać "Redirect uri" i zmieniać "Supported account type".Po założeniu zobaczysz: ![New application AD](images/functions/ex3/new-application.png). Zapamietaj "Application (client) ID" oraz "Directory (tenant) ID"
    4. Wybierz "Add a certyficate or secret" i na liście "Client secrets" wybierz "New client secret"
    5. Uzupełnij nazwę secreta, możesz wybrać okres ważności i dodać secert
@@ -31,7 +31,7 @@
             const tableClient = new TableClient(process.env.TABLE_CONNECTION_STRING, "users",
                 new DefaultAzureCredential());
         ```
-   10. Ustaw zmienna srodowiskowa TABLE_CONNECTION_STRING, na sam url bez uwierztyleniania w stosunku do SAS np
+   10. Ustaw zmienna srodowiskowa TABLE_CONNECTION_STRING, na sam url bez uwierzytelnienia w stosunku do SAS np
         ```
             export TABLE_CONNECTION_STRING="https://afssimplefunction.table.core.windows.net/"
         ```

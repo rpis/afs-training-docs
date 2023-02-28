@@ -1,4 +1,4 @@
-### Cwicenie 1 - uruchomienie prostej funkcji
+### Ćwiczenie 1 - uruchomienie prostej funkcji
 1. Utwórz repozytorium oraz środowisko Codespaces do ćwiczeń związanych z funkcjami ([patrz](environment.md))
 2. Mając uruchomione środowisko utworzymy w ramach naszego worskapce projekt funkcji
    1. Użyj skrótu ctrl-shift-p, zostanie wyświetlona paleta ![Palette](images/environment/new-function-project.png)

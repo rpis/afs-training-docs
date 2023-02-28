@@ -1,3 +1,3 @@
-### Cwicenie 5 - Durable functions
+### Ćwiczenie 5 - Durable functions
 
 ---

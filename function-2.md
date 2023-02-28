@@ -1,4 +1,4 @@
-### Cwicenie 2 - funkcja i prosta baza danych
+### Ćwiczenie 2 - funkcja i prosta baza danych
 
 1. Utworzenie storage account
    1. Otwórz rozszerzenie dla azure

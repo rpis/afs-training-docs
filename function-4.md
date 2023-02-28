@@ -1,4 +1,4 @@
-### Cwicenie 4 - użycie API-GW
+### Ćwiczenie 4 - użycie API-GW
 
 1. Wybieramy utworzoną funkcję w portalu Azure i przechodzimy do menu "Api Management"
 2. Możemy wybrać istniejący już komponent albo utworzyć nowy, tworzymy nowy
