@@ -3,7 +3,7 @@
 1. Stwórzmy tożsamość developerską, aby móc wykorzytać "System Identity" w naszym środowisku
    1. W konsoli Azure znajdz Azure Active Directory i otwórz
    2. Wybierz "App registrations", zostanie przedstawiona lista zedfiniowanych aplikacji
-   3. Wybierz "New registration", nadaj swoja nazwę aplikacji i zarejestruj, nie musisz uzupełniać "Redirect uri" i zmieniać "Supported account type".Po założeniu zobaczysz: ![New application AD](images/functions/ex3/new-application.png). Zapamietaj "Application (client) ID" oraz "Directory (tenant) ID"
+   3. Wybierz "New registration", nadaj swoja nazwę aplikacji i zarejestruj, nie musisz uzupełniać "Redirect uri" i zmieniać "Supported account type".Po założeniu zobaczysz: ![New application AD](images/functions/ex3/new-application.png) Zapamietaj "Application (client) ID" oraz "Directory (tenant) ID"
    4. Wybierz "Add a certyficate or secret" i na liście "Client secrets" wybierz "New client secret"
    5. Uzupełnij nazwę secreta, możesz wybrać okres ważności i dodać secrert
    6. Zapamietaj zaprezentowane Value dla utworzonego secreta
@@ -18,12 +18,12 @@
 
     na przykład:
        
-        ```
+     ```
             export AZURE_CLIENT_ID=b99abf34-615a-41a5-b156-157cd5c72e1a
             export AZURE_TENANT_ID=c2eab347-e7b5-431e-a1c0-761d5be089f0
             export AZURE_CLIENT_SECRET=2nq8Q~OrWqSEk-Nmo_hWqylMrrBOpa2RWQtb4cp3
 
-        ```
+     ```
 
     8. Dodajmy bibliteke do obsługi uwierzytelnienia, wykonaj w terminalu:
         ```
