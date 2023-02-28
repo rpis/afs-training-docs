@@ -17,9 +17,9 @@ Tym sposobem masz przygotowane repozytorium
 ## Uruchomienie codespaces dla utworzionego repo
 
 1. Będąc w konsoli githuba wybierz "Codespaces" ![Repo](images/environment/codespaces-start.png)
-2. Wybieramy "New Codespaces"
-3. Wskazujemy utworzone wczeniej repozytorium, wybieramy branch - domyslnie main, ustawiamy region jak najbliższy geograficznie oraz zmieniamy typ maszyny na "2-core"  ![Repo](images/environment/codespaces-machine.png)
-4. Potwierdzamy nasz wybór i po momencie nasze środowsko jest dostępne
+2. Wybierz "New Codespaces"
+3. Wskaż utworzone wczeniej repozytorium, wybieramy branch - domyslnie main, ustawiamy region jak najbliższy geograficznie oraz zmieniamy typ maszyny na "2-core"  ![Repo](images/environment/codespaces-machine.png)
+4. POtwierdź wybór i po momencie środowsko jest dostępne
 
 ---
 ### Konfiguracja codespaces dla 
