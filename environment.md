@@ -4,7 +4,7 @@
 ## Założenie repozytorium w git
 1. Otwórz konsole github i zaloguj się ([link](https://github.com))
 2. Wybierz nowe repozytorium
-3. Uzupełnij nazwę reppozytorium
+3. Uzupełnij nazwę repozytorium
 4. Wybierz czy ma być widoczne publicznie czy prywatnie. Uwaga domyślnie tworzone jest repozytorium publiczne
 5. Zaznacz "Add README file" - jest to istotne ze względu na utworzenie automatycznie brancha main
 6. Potwierdź utworzenie repozytorium
@@ -14,7 +14,7 @@ Tym sposobem masz przygotowane repozytorium
 ![Repo](images/environment/repo-after-creation.png)
 
 ---
-## Uruchomienie codespaces dla utworzionego repo
+## Uruchomienie codespaces dla utworzonego repo
 
 1. Będąc w konsoli githuba wybierz "Codespaces" ![Repo](images/environment/codespaces-start.png)
 2. Wybierz "New Codespaces"
