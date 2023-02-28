@@ -237,7 +237,7 @@
            ```
               "route": "user/{id}",
             ```
-        4. Sprawdz działąnie wyKorzytując wywołanie:
+        4. Sprawdz działąnie wykorzystując wywołanie:
             ```
                 ###
                 get {{baseUrl}}/user/1

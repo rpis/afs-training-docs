@@ -1,4 +1,4 @@
-***Środowisko powinno zostac skonfigurowane dla każdej grupy ćwiczeń , gdy zaczynamyt pracę***
+***Środowisko powinno zostac skonfigurowane dla każdej grupy ćwiczeń , gdy zaczynamy pracę***
 
 ---
 ## Założenie repozytorium w git
