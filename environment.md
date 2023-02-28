@@ -1,4 +1,4 @@
-***Środowisko powinno zostac skonfigurowane dla każdej grupy ćwiczeń jeżeli wskazano w instrukcji do ćwiczenia***
+***Środowisko powinno zostac skonfigurowane dla każdej grupy ćwiczeń , gdy zaczynamyt pracę***
 
 ---
 ## Założenie repozytorium w git
@@ -40,6 +40,8 @@ Pracujemy na otwartym w przeglądarce środowisku
         nvm install 18
         nvm use 18
     ```
-5. sprawdxamy wersję node komendą node --version, powinna zostać pokazana v18.x
+5. sprawdzamy wersję node komendą node --version, powinna zostać pokazana v18.x
 
 Nasze środowisko jest gotowe do pracy
+
+Uwaga : po każdym uruchomieniu środowiska należy wybrać wersję Node instrukcją "nvm use 18"
