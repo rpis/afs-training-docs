@@ -61,7 +61,7 @@
         4.  Znajdz prawo "Storage Account Contributor", zaznacz na liscie i przejdz dalej ![cChoose role](images/functions/ex3/add-role-name.png)
         5.  Kliknij "Select member"i odfiltruj po nazwie zdefiniowanej w Ad aplikacji ![Select members](images/functions/ex3/select-members.png), zaznaczamy i potwierdzmy wybór
         6.  Potwierdzamy za pomocą "Review + assign", ponownie potwierdzamy
-        7.  Po chwili zobaczymy na liście utorzone powiązanie roli
+        7.  Po chwili zobaczymy na liście utworzone powiązanie roli
         8.  Powtarzamy czynności dodając role "Storage Table Data Contributor"
         9.  Powtarzamy czynności dodając role "Storage Blob Data Owner", w tym wypadku potwierdzamy również condition nie zmieniając nic
     11. Uruchamiamy funkcję i potwierdzamy działanie lokalne
