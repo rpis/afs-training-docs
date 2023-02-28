@@ -19,9 +19,9 @@
     na przykład:
        
      ```
-            export AZURE_CLIENT_ID=b99abf34-615a-41a5-b156-157cd5c72e1a
-            export AZURE_TENANT_ID=c2eab347-e7b5-431e-a1c0-761d5be089f0
-            export AZURE_CLIENT_SECRET=2nq8Q~OrWqSEk-Nmo_hWqylMrrBOpa2RWQtb4cp3
+        export AZURE_CLIENT_ID=b99abf34-615a-4ua5-b156-157cd5c72e1a
+        export AZURE_TENANT_ID=c2eab347-eub5-431e-a1c0-761d5be089f0
+        export AZURE_CLIENT_SECRET=2nq8Q~OrWqSEk-Nmo_huuylMrrBOpa2RWQtb4cp3
 
      ```
 
@@ -59,11 +59,11 @@
         2.  Przejdz na zakładę "Role Assignment"
         3.  Kliknij "Add", wybierając "Add role assignment"
         4.  Znajdz prawo "Storage Account Contributor", zaznacz na liscie i przejdz dalej ![cChoose role](images/functions/ex3/add-role-name.png)
-        5.  Kliknij "Select member"i odfiltruj po nazwie zdefiniowanej w Ad aplikacji ![Select members](images/functions/ex3/select-members.png), zaznaczamy i potierdzmy wybór
+        5.  Kliknij "Select member"i odfiltruj po nazwie zdefiniowanej w Ad aplikacji ![Select members](images/functions/ex3/select-members.png), zaznaczamy i potwierdzmy wybór
         6.  Potwierdzamy za pomocą "Review + assign", ponownie potwierdzamy
         7.  Po chwili zobaczymy na liście utorzone powiązanie roli
-        8.  Powtarzamy czynnoci dodając role "Storage Table Data Contributor"
-        9.  Powtarzamy czynnoci dodając role "Storage Blob Data Owner", w tym wypadku potwierdzamy również condition nie zmieniając nic
+        8.  Powtarzamy czynności dodając role "Storage Table Data Contributor"
+        9.  Powtarzamy czynności dodając role "Storage Blob Data Owner", w tym wypadku potwierdzamy również condition nie zmieniając nic
     11. Uruchamiamy funkcję i potwierdzamy działanie lokalne
     12. Przygotowanie funcji w Azurze do użycia "system identity"
         1.  W portalu azure znajdujemy naszą funkcję, wybieramy "Identity" i na zakładce "System assigned" ustawiamy na ON
