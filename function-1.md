@@ -40,10 +40,10 @@
     3. Po uruchomieniu powinien zostać wyświetlony komunikat ![Start funkcji](images/functions/func-start.png)
     4. Zostaniemy również poinformowani o wystawieniu nowego portu: ![Port open](images/functions/port-open.png)
     5. Możemy zobaczyć adresy i porty na których działa nasz aplikacja na zakładce "Porty" ![Ports](images/functions/ports.png)
-    6. Na powyższej zakładce, gdy najedziemy na adres lokalny możemy uruchomić przweglądarkę w środowisku (symbol otwarcia w edytorze), lub w osobnej zakładce (symbol weba - globus)
+    6. Na powyższej zakładce, gdy najedziemy na adres lokalny możemy uruchomić przeglądarkę w środowisku (symbol otwarcia w edytorze), lub w osobnej zakładce (symbol weba - globus)
     7. Po otwarciu w edytorze zobaczymy komunikat domyslny o uruchomionej funkcji ![Running](images/functions/running-function.png)
     8. Dodaj w adresie przeglądarki na koncu /api/get-all (mój adres ma postać : https://rpis-animated-space-sniffle-x5qg6qq4qw73xg-7071.preview.app.github.dev/api/get-all
-    9. Po wywoałaniu widzimy odpowiedź wykonanej fukkcji ![Answer](images/functions/function-simple-answer.png)
+    9. Po wywoałaniu widzimy odpowiedź wykonanej funkcji ![Answer](images/functions/function-simple-answer.png)
     10. Możemy również wywołać tak https://rpis-animated-space-sniffle-x5qg6qq4qw73xg-7071.preview.app.github.dev/api/get-all?name=Anna, zobacz samodzielnie co się stanie
     11. Użycie rest-client - aby sprawdzać działanie api w środowisku dostępny jest rozszerzenie do tego, użyjemy jego
         1.  Utwórz w glównym katalogu plik req.http (ustaw sie gdzieś w glównym katalogu i wybierz dodaj plik)
@@ -82,7 +82,7 @@
                 get {{baseUrl}}/get-all?name=Anna
 
             ```
-    13. Zmienimy kod dla get-all ...
+    13. Zmień kod dla get-all ...
         1.  Zmień kod w pliku index.js na:
             ```
                 const response = [{

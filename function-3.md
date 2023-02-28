@@ -1,6 +1,6 @@
 ### Ćwiczenie 3 - funkcje i bezpieczeństwo wewnątrz infrastruktury
 
-1. Stwórzmy tożsamość developerską, aby móc wykorzytać "System Identity" w naszym środowisku
+1. Stwórz tożsamość developerską, aby móc wykorzystać "System Identity" w naszym środowisku
    1. W konsoli Azure znajdz Azure Active Directory i otwórz
    2. Wybierz "App registrations", zostanie przedstawiona lista zedfiniowanych aplikacji
    3. Wybierz "New registration", nadaj swoja nazwę aplikacji i zarejestruj, nie musisz uzupełniać "Redirect uri" i zmieniać "Supported account type".Po założeniu zobaczysz: ![New application AD](images/functions/ex3/new-application.png) Zapamietaj "Application (client) ID" oraz "Directory (tenant) ID"
@@ -25,7 +25,7 @@
 
      ```
 
-    8. Dodajmy bibliteke do obsługi uwierzytelnienia, wykonaj w terminalu:
+    8. Dodaj bibliteke do obsługi uwierzytelnienia, wykonaj w terminalu:
         ```
             npm install @azure/identity
         ```
@@ -54,22 +54,22 @@
         [2023-02-20T13:01:15.685Z]     at process.processTicksAndRejections (node:internal/process/task_queues:95:5).
     ```
 
-    10. Wrócmy do portalu Azure i nadajmy uprawnienia dla naszej tożsamości developerskiej
+    10. Wróć do portalu Azure i nadaj uprawnienia dla naszej tożsamości developerskiej
         1.  Znajdz wykorzytywany storage account i wejdz na zakładkę "Access Control"
         2.  Przejdz na zakładę "Role Assignment"
         3.  Kliknij "Add", wybierając "Add role assignment"
-        4.  Znajdz prawo "Storage Account Contributor", zaznacz na liscie i przejdz dalej ![cChoose role](images/functions/ex3/add-role-name.png)
+        4.  Znajdz prawo "Storage Account Contributor", zaznacz na liscie i przejdz dalej ![Choose role](images/functions/ex3/add-role-name.png)
         5.  Kliknij "Select member"i odfiltruj po nazwie zdefiniowanej w Ad aplikacji ![Select members](images/functions/ex3/select-members.png), zaznaczamy i potwierdzmy wybór
-        6.  Potwierdzamy za pomocą "Review + assign", ponownie potwierdzamy
-        7.  Po chwili zobaczymy na liście utworzone powiązanie roli
-        8.  Powtarzamy czynności dodając role "Storage Table Data Contributor"
-        9.  Powtarzamy czynności dodając role "Storage Blob Data Owner", w tym wypadku potwierdzamy również condition nie zmieniając nic
-    11. Uruchamiamy funkcję i potwierdzamy działanie lokalne
-    12. Przygotowanie funcji w Azurze do użycia "system identity"
-        1.  W portalu azure znajdujemy naszą funkcję, wybieramy "Identity" i na zakładce "System assigned" ustawiamy na ON
-        2. Zapisujemy zmiany
-    13. Dodajemy role ustawiane w pkt.12 ale dla tożsamości naszej funckji (wyszukamy po początku nazwy)
-    14. Zmianiamy zmienna środowiskową TABLE_CONNECTION_STRING na sam adres usługi
-    15. Sprawdzamy działanie w środowisku Azure (czasami należy restartować funkcję, zwłaszcza jak za szybko zmian dokonujemy)
+        6.  Potwierdź za pomocą "Review + assign", ponownie potwierdzamy
+        7.  Po chwili zobaczysz na liście utworzone powiązanie roli
+        8.  Powtórz czynności dodając role "Storage Table Data Contributor"
+        9.  Powtórz czynności dodając role "Storage Blob Data Owner", w tym wypadku potwierź również condition nie zmieniając nic
+    11. Uruchom funkcję i potwierdź działanie lokalne
+    12. Przygotuj funcji w Azurze do użycia "system identity"
+        1. W portalu azure znajdź swoją funkcję, wybierz "Identity" i na zakładce "System assigned" ustaw na ON
+        2. Zapisz zmiany
+    13. Dodaj role ustawiane w pkt.12 ale dla tożsamości naszej funkcji (wyszukamy po początku nazwy)
+    14. Zmień zmienna środowiskową TABLE_CONNECTION_STRING na sam adres usługi
+    15. Sprawdź działanie w środowisku Azure (czasami należy restartować funkcję, zwłaszcza jak za szybko zmian dokonujemy)
 
 ---

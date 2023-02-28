@@ -12,7 +12,7 @@
     ```
      npm install @azure/data-tables
     ```
-   2. Zmodyfikujmy kod
+   2. Zmodyfikuj kod
 
     ```
         const { TableClient } = require("@azure/data-tables");
@@ -34,18 +34,18 @@
         }
     ```
    3. Uzyskajmy SAS Key
-       1. Logujemy się/ przechodzimy do Azure
-       2. Znajdujemy założony storage account
-       3. W menu "Security + networking" otwieramy "Shared access signature"
-       4. Zostawiamy proponowane ustawienia zmieniając jedynie:
-          1.  dodajemy wszystkie w "Allowed resource types"
-          2.  ustawiamy daty od do tak, żeby zawieraly następne parę godzin/dni/lat ... (zależy kto co liczy)
-          3.  klikamy Generate
-          4.  Kopiujemy z zapmaiętujemy sobie "Table service SAS URL"
-   4. Wklejmy uzyskany klucz do kodu
-   5. Uruchommy naszą funcję wywołując "func start"
-   6. Spróbujmy wywołać funkcję
-   7. Po wywołaniu w konsoli zobaczymy błąd
+       1. Zaloguj się/ przejdź do Azure
+       2. Znajdź założony storage account
+       3. W menu "Security + networking" otwórz "Shared access signature"
+       4. Zostaw proponowane ustawienia zmieniając jedynie:
+          1.  dodaj wszystkie w "Allowed resource types"
+          2.  ustaw daty od do tak, żeby zawieraly następne parę godzin/dni/lat ... (zależy kto co liczy)
+          3.  kliknij Generate
+          4.  Skopiuj i  zapamietaj "Table service SAS URL"
+   4. Wklej uzyskany klucz do kodu
+   5. Uruchom naszą funcję wywołując "func start"
+   6. Spróbuj wywołać funkcję
+   7. Po wywołaniu w konsoli zobaczysz błąd
 
     ```
         [2023-02-19T21:11:59.600Z] Executed 'Functions.get-all' (Failed, Id=9a6a63a9-bd6e-4e75-88a3-f6804b237761, Duration=45ms)
@@ -56,16 +56,16 @@
         [2023-02-19T21:11:59.600Z]     at deserializeResponseBody (/workspaces/afs-functions/node_modules/@azure/core-client/dist/index.js:1241:45)
         [2023-02-19T21:11:59.600Z]     at process.processTicksAndRejections (node:internal/process/task_queues:95:5).
     ```
-   8. Nie mamy założonej tablicy, wiec załóżmy z przykładową zawartości
-      1. Przejdzmy do załozonego storage account
-      2. Wybieramy "Storage browser", nastepnie "Tables", uzyskujemy widok ![Empty list](images/functions/ex2/empty-list-storage-browser.png)
-      3. Wybieramy Add table, nazywamy "users" i potwierdzmy, Zostanie ona przedstawiona na liście
-      4. Wybieramy naszą tablice i widzimy pustą zawartość
-      5. Wybieramy "Add entity" i uzupełniamy podobnie jak poniżej ![Add Entity](images/functions/ex2/add-entity.png) i zatwierdzamy. Rekord zostanie przedstawiony na liście
-   9. Wracamy do Codespaces i sprawdzamy ponownie działanie funkcji. Powinnośmy uzyskać w odpowiedzi dane wprowadzone do bazy
-   10. Wdrażamy na Azura i ponownie sprawdzamy
-   11. Podawanie connection stringa w kodzie nie jest najlepszym pomysłem, zatem wynieśmy go do zmiennych środowiskowych
-       1.  Zmieńmy kod w podanym fragmencie
+   8. Nie mamy założonej tablicy, wiec załóż z przykładową zawartości
+      1. Przejdź do załozonego storage account
+      2. Wybierz "Storage browser", nastepnie "Tables", uzyskasz widok ![Empty list](images/functions/ex2/empty-list-storage-browser.png)
+      3. Wybierz Add table, nazywamy "users" i potwieerdź, Zostanie ona przedstawiona na liście
+      4. Wybierz założoną tablice i zobaczysz pustą zawartość
+      5. Wybierz "Add entity" i uzupełnij podobnie jak poniżej ![Add Entity](images/functions/ex2/add-entity.png) i zatwierdź. Rekord zostanie przedstawiony na liście
+   9. Wróć do Codespaces i sprawdź ponownie działanie funkcji. Powinno się uzyskać w odpowiedzi dane wprowadzone do bazy
+   10. Wdróż na Azura i ponownie sprawdź
+   11. Podawanie connection stringa w kodzie nie jest najlepszym pomysłem, zatem wynieś go do zmiennych środowiskowych
+       1.  Zmień kod w podanym fragmencie
 
         ```
         ...
@@ -78,13 +78,13 @@
             export TABLE_CONNECTION_STRING="YOUR_SAS_KEY"
         ```
     13. Sprawdz czy nie zapsuleś
-    14. Wdrożenie na Azure musimy zacząc od ustwienia zmiennej środowiskowej w funkcji
+    14. Wdrożenie na Azure musisz zacząc od ustwienia zmiennej środowiskowej w funkcji
         1.  Znajdz swoją funkcję w zasobach prezentowanych w rozszerzeniu do Azure
         2.  Rozwiń i wybierz "Application Settings"
         3.  Dodaj nową zmienna o nazwie TABLE_CONNECTION_STRING, zawierającą klucz SAS (tym razem bez "")
         4.  Wdróż i sprawdz działanie
-    15. Stwórzmy funkcję obsługującą tworzenie nowego użytkownika
-        1. Utwórz palate i znajdz "Create Function" -> poszukaj po słowie kluczowym i wybierz tę funkcję
+    15. Stwórz funkcję obsługującą tworzenie nowego użytkownika
+        1. Otwórz palate i znajdz "Create Function" -> poszukaj po słowie kluczowym i wybierz tę funkcję
         2. Wybierz "Http trigger", nazwij "post-one" i wybierz uwierzytelnianie anonimowe. Zostanie utworzona nowa funkcja
         3. Zmień kod w pliku index.js (dla utorzonej funkcji) na poniższy, zapewniający zapis nowego rekordu do bazy
             
@@ -118,7 +118,7 @@
                     }
                 }
             ```
-        4. Zmieńmy ustawienia funcji aby akceptowała tylko post (w pliku function.json):
+        4. Zmień ustawienia funcji aby akceptowała tylko post (w pliku function.json):
         ```
                 {
                 "bindings": [
@@ -151,7 +151,7 @@
                     "email": "ip@cz.cz"
                 }
             ```
-    16. Zmieńmy nasze endpoiny, definiując route:
+    16. Zmień nasze endpoiny, definiując route:
         1.  Dla funkcji get-all, jak poniżej:
             ```
                 {
@@ -174,7 +174,7 @@
                 ]
                 }
             ```
-        2. Dla funkcji post-one, jakej:
+        2. Dla funkcji post-one, jak poniżej:
             ```
                 {
                 "bindings": [
@@ -196,7 +196,7 @@
                 ]
                 }
             ```
-        3. Zmienily się nam automatycznie uri naszych funkcji, teraz w req.http inaczej je zdefiniujemy
+        3. Zmienily się nam automatycznie uri naszych funkcji, teraz w req.http inaczej je zdefiniuj
             ```
 
             @baseUrl = http://localhost:7071/api
@@ -215,7 +215,7 @@
             }
             ```
 
-    16. [Opcjonalne] Dodajmy funkcje pobierającą pojeyńczy rekokord z bazy po id
+    16. [Opcjonalne] Dodaj funkcje pobierającą pojedyńczy rekord z bazy po id
         1.  Utwórz nową funkcję nazywając ja "get-one"
         2.  Dodej kod:
             ```
