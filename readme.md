@@ -27,4 +27,4 @@
  1. Funkcje https://github.com/rpis/afs-functions
  2. App Service https://github.com/rpis/afs-app-service
 
-Wybierz branchg aby uzyskać kod skończonego ćwiczenia
+Wybierz branch aby uzyskać kod skończonego ćwiczenia
