@@ -2,7 +2,7 @@
 
 1. Utworzenie storage account
    1. Otwórz rozszerzenie dla azure
-   2. Kliknij na "Storage accounts" i wybierz "Crezte new storege account"
+   2. Kliknij na "Storage accounts" i wybierz "Create new storege account"
    3. Wprowadz nazwę wybranaą przez Ciebie, pamiętaj że możesz używać tylko małych liter i numerów - nazwa musi być unikalna globalnie wiec możesz dodać swój prefiks (inicjały?)
    4. Wybierz lokalizację dla storage account i zatwierdz
    5. Po chwili zasób zostanie załozony i będzie widoczny na liście zasobów ![Lista zasobów](images/functions/ex2/create-storage.png)
@@ -35,7 +35,7 @@
     ```
    3. Uzyskajmy SAS Key
        1. Logujemy się/ przechodzimy do Azure
-       2. Znajdujmey założony staorage account
+       2. Znajdujemy założony storage account
        3. W menu "Security + networking" otwieramy "Shared access signature"
        4. Zostawiamy proponowane ustawienia zmieniając jedynie:
           1.  dodajemy wszystkie w "Allowed resource types"
@@ -63,7 +63,7 @@
       4. Wybieramy naszą tablice i widzimy pustą zawartość
       5. Wybieramy "Add entity" i uzupełniamy podobnie jak poniżej ![Add Entity](images/functions/ex2/add-entity.png) i zatwierdzamy. Rekord zostanie przedstawiony na liście
    9. Wracamy do Codespaces i sprawdzamy ponownie działanie funkcji. Powinnośmy uzyskać w odpowiedzi dane wprowadzone do bazy
-   10. Wdrażamy na Azura i ponownie sprawdxzamy
+   10. Wdrażamy na Azura i ponownie sprawdzamy
    11. Podawanie connection stringa w kodzie nie jest najlepszym pomysłem, zatem wynieśmy go do zmiennych środowiskowych
        1.  Zmieńmy kod w podanym fragmencie
 
@@ -73,19 +73,19 @@
         ...
 
         ```
-    12. Ustawz zmienna środowiskowa w terminalu
+    12. Ustaw zmienna środowiskowa w terminalu
         ```
             export TABLE_CONNECTION_STRING="YOUR_SAS_KEY"
         ```
-    13. Sprawdz czy nie zapsules
+    13. Sprawdz czy nie zapsuleś
     14. Wdrożenie na Azure musimy zacząc od ustwienia zmiennej środowiskowej w funkcji
-        1.  Znajdz swoją funnkcję w zasobach prezentowanych w rozszerzeniu do Azure
-        2.  Rozwin i wybierz "Application Settings"
+        1.  Znajdz swoją funkcję w zasobach prezentowanych w rozszerzeniu do Azure
+        2.  Rozwiń i wybierz "Application Settings"
         3.  Dodaj nową zmienna o nazwie TABLE_CONNECTION_STRING, zawierającą klucz SAS (tym razem bez "")
         4.  Wdróż i sprawdz działanie
-    15. Stwórzmy funckję obsługującą tworzenie nowego użytkownika
+    15. Stwórzmy funkcję obsługującą tworzenie nowego użytkownika
         1. Utwórz palate i znajdz "Create Function" -> poszukaj po słowie kluczowym i wybierz tę funkcję
-        2. Wybierz "Http triger", nazwij "post-one" i wybierz uwierzytlenianie anonimowe. Zostanie utworzona nowa funkcja
+        2. Wybierz "Http trigger", nazwij "post-one" i wybierz uwierzytelnianie anonimowe. Zostanie utworzona nowa funkcja
         3. Zmień kod w pliku index.js (dla utorzonej funkcji) na poniższy, zapewniający zapis nowego rekordu do bazy
             
             ```
@@ -140,7 +140,7 @@
                 }
         ```
 
-        5. Uruchom loklnie projekt i uzywjąc poniższego wywołania (plik req.http) sprawdz działanie
+        5. Uruchom lokalnie projekt i używając poniższego wywołania (plik req.http) sprawdz działanie
             ```
                 ###
                 post {{baseUrl}}/post-one
@@ -151,7 +151,7 @@
                     "email": "ip@cz.cz"
                 }
             ```
-    16. Uapiujmy naszw endpoiny, definiując route:
+    16. Zmieńmy nasze endpoiny, definiując route:
         1.  Dla funkcji get-all, jak poniżej:
             ```
                 {
@@ -233,7 +233,7 @@
                     };
                 }
             ```
-        3. Ogranicz działałanie jedynie do get, oraz zdefiniuj routing jak poniżej:
+        3. Ogranicz działanie jedynie do get, oraz zdefiniuj routing jak poniżej:
            ```
               "route": "user/{id}",
             ```

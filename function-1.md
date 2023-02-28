@@ -1,15 +1,15 @@
 ### Cwicenie 1 - uruchomienie prostej funkcji
-1. Utworz repozytorium oraz środowisko Codespaces do ćwiczeń związanych z funkcjami ([patrz](environment.md))
-2. Majc uruchomione środowisko utworzymy w ramach naszego worskapce projekt funkcji
-   1. Użyj skrótu ctrl-shipt-P, zostanie wyświetlona paleta ![Palette](images/environment/new-function-project.png)
-   2. Odfiltruj zadania dotyczące funcjji wpiskując func itp
+1. Utwórz repozytorium oraz środowisko Codespaces do ćwiczeń związanych z funkcjami ([patrz](environment.md))
+2. Mając uruchomione środowisko utworzymy w ramach naszego worskapce projekt funkcji
+   1. Użyj skrótu ctrl-shift-p, zostanie wyświetlona paleta ![Palette](images/environment/new-function-project.png)
+   2. Odfiltruj zadania dotyczące funcjji wpiskując func itp.
    3. Wybierz "Azure Function: create function"
-   4. Wybierz aktualny katalog jako katalog tworzoenje funkcji ![Folder](images/functions/create-project.png)
+   4. Wybierz aktualny katalog jako katalog tworzoneje funkcji ![Folder](images/functions/create-project.png)
    5. Wybierz język JavaSript
-   6. Wybierz Http triger jako template dla pierwszej tworzoenj funkcji
+   6. Wybierz Http trigger jako template dla pierwszej tworzoenj funkcji
    7. Nazwij funkcje get-all (lub jak chcesz)
    8. Ustaw poziom autoryzacji jako Anonymous
-   9. Po wykonaniu powyższych czynności zostanie usupełniona zawartość projektu ![Workspace Content](images/functions/create-workspace-content.png)
+   9. Po wykonaniu powyższych czynności zostanie uzupełniona zawartość projektu ![Workspace Content](images/functions/create-workspace-content.png)
 
 3. Otwórz plik index.js z katalogu get-all (lub innego odpwiadającego nazwie Twojej funkcji). Została stworzona podstawowa funkcja
    ```
@@ -43,10 +43,10 @@
     6. Na powyższej zakładce, gdy najedziemy na adres lokalny możemy uruchomić przweglądarkę w środowisku (symbol otwarcia w edytorze), lub w osobnej zakładce (symbol weba - globus)
     7. Po otwarciu w edytorze zobaczymy komunikat domyslny o uruchomionej funkcji ![Running](images/functions/running-function.png)
     8. Dodaj w adresie przeglądarki na koncu /api/get-all (mój adres ma postać : https://rpis-animated-space-sniffle-x5qg6qq4qw73xg-7071.preview.app.github.dev/api/get-all
-    9. Po wywoałaniu widzimy odpwoiedz wykonanej fukkcji ![Answer](images/functions/function-simple-answer.png)
+    9. Po wywoałaniu widzimy odpowiedź wykonanej fukkcji ![Answer](images/functions/function-simple-answer.png)
     10. Możemy również wywołać tak https://rpis-animated-space-sniffle-x5qg6qq4qw73xg-7071.preview.app.github.dev/api/get-all?name=Anna, zobacz samodzielnie co się stanie
     11. Użycie rest-client - aby sprawdzać działanie api w środowisku dostępny jest rozszerzenie do tego, użyjemy jego
-        1.  Utwórz w glównym katalogu plik req.http (ustaw sie gdzies w glownym katalogu i wybierz dodaj plik)
+        1.  Utwórz w glównym katalogu plik req.http (ustaw sie gdzieś w glównym katalogu i wybierz dodaj plik)
         2.  Otwórz plik
         3.  Wklej do pliku wywołanmie własnej funkcji, w moim przypadku to:
             ```
@@ -106,6 +106,6 @@
             ```
         2. Uruchom funkcję lokalnie i sprawdz działanie
         3. Uruchom funkcję w Azure
-        4. Wlacz logowanie na konsole z Azure i zobacz czy widzisz komunikat który masz w kodzie. Logowanie wlaczysz wybierając swoją funkcje i menu...
+        4. Włacz logowanie na konsole z Azure i zobacz czy widzisz komunikat który masz w kodzie. Logowanie właczysz wybierając swoją funkcje i menu...
    
 ---
