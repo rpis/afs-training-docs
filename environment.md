@@ -22,7 +22,7 @@ Tym sposobem masz przygotowane repozytorium
 4. Potwierdź wybór i po momencie środowsko jest dostępne
 
 ---
-### Konfiguracja codespaces dla 
+### Konfiguracja codespaces
 Pracuj na otwartym w przeglądarce środowisku
 1. Otwórz terminal (Menu kabab w lewym rogu ekranu -> Terminal -> New terminal
 2. Wykonaj instalację podsatwowych rozszerzeń (można to zrobić również ręcznie) 
