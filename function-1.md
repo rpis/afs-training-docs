@@ -29,7 +29,7 @@
     }
    ```
 
-        Nie robi ona za wiele, ale posłuży nam do uruchomienia lokalnie
+    Nie robi ona za wiele, ale posłuży nam do uruchomienia lokalnie
 
 4. Uruchomienie lokalne (w rodowisku codespaces) funkcji:
     1. Otwórz terminal
