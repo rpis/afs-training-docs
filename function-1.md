@@ -12,6 +12,7 @@
    9. Po wykonaniu powyższych czynności zostanie uzupełniona zawartość projektu ![Workspace Content](images/functions/create-workspace-content.png)
 
 3. Otwórz plik index.js z katalogu get-all (lub innego odpwiadającego nazwie Twojej funkcji). Została stworzona podstawowa funkcja
+   
    ```
         module.exports = async function (context, req) {
             context.log('JavaScript HTTP trigger function processed a request.');
@@ -27,7 +28,7 @@
             };
     }
    ```
-   
+
         Nie robi ona za wiele, ale posłuży nam do uruchomienia lokalnie
 
 4. Uruchomienie lokalne (w rodowisku codespaces) funkcji:
