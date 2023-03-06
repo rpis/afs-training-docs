@@ -3,7 +3,7 @@
 2. Mając uruchomione środowisko utworzymy w ramach naszego worskapce projekt funkcji
    1. Użyj skrótu ctrl-shift-p, zostanie wyświetlona paleta ![Palette](images/environment/new-function-project.png)
    2. Odfiltruj zadania dotyczące funcjji wpiskując func itp.
-   3. Wybierz "Azure Function: create function"
+   3. Wybierz "Azure Function: Create Function App in Azure"
    4. Wybierz aktualny katalog jako katalog tworzoneje funkcji ![Folder](images/functions/create-project.png)
    5. Wybierz język JavaSript
    6. Wybierz Http trigger jako template dla pierwszej tworzoenj funkcji
