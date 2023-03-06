@@ -62,7 +62,7 @@
 
                 @baseUrl = http://localhost:7071/api
 
-                get &#123;&#123;baseUrl&#125;&#125;/get-all?name=Anna
+                get { {baseUrl} }/get-all?name=Anna
 
             ```
     12. Deployment na azure
