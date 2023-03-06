@@ -62,8 +62,7 @@
 
                 @baseUrl = http://localhost:7071/api
 
-                get { {baseUrl} }/get-all?name=Anna
-
+                get { {baseUrl} }/get-all?name=Anna <- wąsy powinny być razem bez spacji 
             ```
     12. Deployment na azure
         1.  W menu kliknij na dodatku Azure (takie A...)
@@ -81,7 +80,7 @@
                 #@baseUrl = http://localhost:7071/api
                 @baseUrl = https://afs-simple-function.azurewebsites.net/api
 
-                get {baseUrl}/get-all?name=Anna
+                get { {baseUrl} }/get-all?name=Anna <- wąsy powinny być razem bez spacji 
 
             ```
     13. Zmień kod dla get-all ...

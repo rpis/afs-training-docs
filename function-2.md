@@ -143,7 +143,7 @@
         5. Uruchom lokalnie projekt i używając poniższego wywołania (plik req.http) sprawdz działanie
             ```
                 ###
-                post {{baseUrl}}/post-one
+                post { {baseUrl} }/post-one
 
                 {
                     "id": "2",
@@ -202,11 +202,11 @@
             @baseUrl = http://localhost:7071/api
             #@baseUrl = https://afs-simple-function.azurewebsites.net/api
 
-            get {{baseUrl}}/user
+            get { {baseUrl} }/user
 
 
             ###
-            post {{baseUrl}}/user
+            post { {baseUrl} }/user
 
             {
                 "id": "2",
@@ -240,7 +240,7 @@
         4. Sprawdz działanie wykorzystując wywołanie:
             ```
                 ###
-                get {{baseUrl}}/user/1
+                get { {baseUrl} }/user/1
             ```
         5. Wdróż na azure i sprawdz działanie.
     

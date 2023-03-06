@@ -34,7 +34,7 @@
     ```
         @baseUrl = http://localhost:8080/
 
-        get {{baseUrl}}
+        get { {baseUrl} } <- wąsy powinny być razem bez spacji 
 
     ```
 8. Utwórz app service korzystając z palety.
