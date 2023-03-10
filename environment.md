@@ -30,12 +30,12 @@ Pracuj na otwartym w przeglądarce środowisku
         code --install-extension ms-vscode.vscode-node-azure-pack
         code --install-extension humao.rest-client
     ```
-3. Zainstaluj core-tools dla azure
+3. Zainstaluj core-tools dla azure (niezbędne tylko dla środowiska dla funkcji)
     ```
         sudo apt-get update
         sudo apt-get install azure-functions-core-tools-4
     ```
-4. Zmień wersję node na 18 (azure core tools w tym momencie nie pracują na 19)
+4. Zmień wersję node na 18 (azure core tools w tym momencie nie pracują na 19) (niezbędne tylko dla środowiska dla funkcji)
     ```
         nvm install 18
         nvm use 18
