@@ -86,8 +86,9 @@
             console.log(`Server is running on http://localhost:${port}`);
         });
    ```
-
-4. Dodaj do bazy danych ręcznie rekord, w tym celu:
+4. Ustaw zmienna środowiskowa COSMOSDB_CONNECTION_STRING na wartość pobraną z Cosmos DB w explorerze (wybierz swoją baze i wybierz z menu Copy Connection String)
+5. Uruchom lokalnie i sprawdz działanie - powinno zwrócić pustą tablicę
+6. Dodaj do bazy danych ręcznie rekord, w tym celu:
    1. Znajdz w portalu Azure swoja bazę cosmodb
    2. Wejdz do "Data Explorera"
    3. Wybierz w bazie users, strukture users oraz Items
@@ -101,9 +102,8 @@
             "status": "ACTIVE",
         }
     ```
-5. Ustaw zmienna środowiskowa COSMOSDB_CONNECTION_STRING na wartość pobraną z Cosmos DB w explorerze (wybierz swoją baze i wybierz z menu Copy Connection String)
-6. Uruchoma kod lokalnie i zobacz działanie z bazą
-7. Dodaj do "Application Settings" nową wartość COSMOSDB_CONNECTION_STRING ustawioną na connection string do cosmos db
-8. Wdróż kod i sprawdz działanie
+7. Uruchoma kod lokalnie i zobacz działanie z bazą
+8. Dodaj do "Application Settings" nową wartość COSMOSDB_CONNECTION_STRING ustawioną na connection string do cosmos db
+9. Wdróż kod i sprawdz działanie
    
 ---
