@@ -99,7 +99,7 @@
             "partitionKey": "1",
             "name": "John Doe",
             "email": "john.doe@wp.pl",
-            "status": "ACTIVE",
+            "status": "ACTIVE"
         }
     ```
 7. Uruchoma kod lokalnie i zobacz działanie z bazą
