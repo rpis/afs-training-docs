@@ -1,15 +1,21 @@
 ### Ćwiczenie 5 - Durable functions
 
-1. Otwieramy palete (Shoft+Cmd+P) i wybieramy "Cretae Function"
+Zakres ćwiczenia:
+- dodamy funkcjonalność procesu do projektu funkcji jak na diagramie poniżej
+
+![Zakres](images/functions/ex5/AFS-Durable.drawio.png)
+
+
+1. Otwórz paletę (Shoft+Cmd+P) i wybieramy "Cretae Function"
    ![Palette](images/functions/ex5/create-function.png)
-2. Wybieramy "Durable Functions orchestrator
+2. Wybierz "Durable Functions orchestrator"
    ![Palette](images/functions/ex5/choose-function-type.png)
-3. Potwierdzamy wybór "Azure Storage" jako miejsca składowania procesów
-4. Nazywamy swoją funkcję "on-boarding-orchestrator"
+3. Potwierdź wybór "Azure Storage" jako miejsca składowania procesów
+4. Nazwij swoją funkcję "on-boarding-orchestrator"
 5. Powstał kod naszego orkiestratora, przejrzyj plik index.js w katalogu "on-boarding-orchestrator"
-6. Tworzymy kolejną funkcję, tym razem "Durable Functions activity", nazywając ją "check-customer-activity"
-7. Tworzymy kolejną funkcję "Durable Functions activity", nazywając ją "finalize-activity"
-8. Zmieniamy orkiestrator procesu na:
+6. Utwórz kolejną funkcję, tym razem "Durable Functions activity", nazywając ją "check-customer-activity"
+7. I utwórz następną funkcję "Durable Functions activity", nazywając ją "finalize-activity"
+8. Zmień kod orkiestrator procesu na:
    ```
        const df = require("durable-functions");
        module.exports = df.orchestrator(function* (context) {
@@ -19,7 +25,7 @@
            return outputs;
        });
    ```
-9. Edytujemy plik host.json, ustawiając w extension nazwe polaczenia wykorzytywnego dla durable functions
+9. Zmień plik host.json, ustawiając w extension nazwe polaczenia do storage wykorzytywnego dla durable functions (jest to etykieta!)
     ```
         "extensions": {
             "durableTask": {
@@ -29,7 +35,7 @@
             }
         }
     ```
-10. Tworzymy plik konfiguracji lokalnej local.settings.json z zawartością definiującą adres storage:
+10. Utwórz plik konfiguracji lokalnej local.settings.json (w głównym katalogu projektu) z zawartością definiującą adres storage:
     ```
         {
             "IsEncrypted": false,
@@ -39,7 +45,7 @@
             }
         }
     ```
-11. Dodajemy do funkcji post-one inicjowanie procesu (dodane const df oraz kod od const client = df.getClient(context); ):
+11. Dodaj do funkcji post-one inicjowanie procesu (dodane const df oraz kod od const client = df.getClient(context); ):
     ```
         const { TableClient } = require("@azure/data-tables");
         const { DefaultAzureCredential } = require("@azure/identity");
@@ -84,7 +90,7 @@
             }
         }
     ```
-12. Aby móc wywołać start procesu musimy dodac do bindingów funckji post-one następujący binding:
+12. Aby móc wywołać start procesu dodaj do bindingów funkcji post-one następujący binding:
     ```
     {
       "name": "starter",
@@ -92,10 +98,10 @@
       "direction": "in"
     }
     ```
-13. Uruchamiamy funkcję, startując wyświetlone zostają funkcję w projekcie:
+13. Uruchom funkcję, startując wyświetlone zostają funkcję w projekcie:
      ![Start](images/functions/ex5/function-started.png)
 
-16. Wywołujemy metode POST /users (funkcja post-one), powinniśmy w logu zobaczy komunikaty związane z wywoływaniem procesu:
+14. Wywołaj metode POST /users (funkcja post-one), powinieneś w logu zobaczyc komunikaty związane z wywoływaniem procesu:
     ```
         [2023-04-18T09:25:37.640Z] Executing 'Functions.post-one' (Reason='This function was programmatically called via the host APIs.', Id=773c6ee1-24da-4f87-892a-8073fe100878)
         [2023-04-18T09:25:37.645Z] JavaScript HTTP trigger function processed a request.
@@ -113,8 +119,8 @@
         [2023-04-18T09:25:38.518Z] Executing 'Functions.on-boarding-orchestrator' (Reason='(null)', Id=046e4ce4-0e60-4083-8b0d-a594390263e3)
         [2023-04-18T09:25:38.525Z] Executed 'Functions.on-boarding-orchestrator' (Succeeded, Id=046e4ce4-0e60-4083-8b0d-a594390263e3, Duration=7ms)
     ```
-17. Uzyskalismy działający proces, chociaż jeszcze nic nie robi :)
-18. Zmień kod orkiestratora aby przekazywac parametry do activity oraz symulowa dłuższy czas pracy:
+15. Uzyskalismy działający proces, chociaż jeszcze nic nie robi :)
+16. Zmień kod orkiestratora aby przekazywac parametry do activity oraz symulowa dłuższy czas pracy:
     ```
         const df = require("durable-functions");
         const moment = require('moment');
@@ -133,7 +139,7 @@
         });
     ```
 
-19. Zmień kod check-customer-activity:
+17. Zmień kod check-customer-activity:
     ```
         const { TableClient } = require("@azure/data-tables");
         const { DefaultAzureCredential } = require("@azure/identity");
@@ -168,8 +174,21 @@
         };
     ```
 
-21. Przetestuj dzialanie funckji i procesu.
-22. Uruchom w Azure, zobacz jak wyglądają zmienne konfiguracyjne oraz spróbuj przetestować działanie.
+21. Przetestuj dzialanie funkcji i procesu.
+22. Zobacz dzialanie funcji "administracyjnych", startowanie procesu oraz sprawdzanie statusu:
+    ```
+        post http://localhost:7071/runtime/webhooks/durabletask/orchestrators/on-boarding-orchestrator/
+
+        {
+            "id": "7"
+        }
+
+        ###
+
+        get http://localhost:7071/runtime/webhooks/durabletask/instances/
+
+    ```
+23. Uruchom w Azure, zobacz jak wyglądają zmienne konfiguracyjne oraz spróbuj przetestować działanie.
 
 
 ---
