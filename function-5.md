@@ -15,7 +15,11 @@ Zakres ćwiczenia:
 5. Powstał kod naszego orkiestratora, przejrzyj plik index.js w katalogu "on-boarding-orchestrator"
 6. Utwórz kolejną funkcję, tym razem "Durable Functions activity", nazywając ją "check-customer-activity"
 7. I utwórz następną funkcję "Durable Functions activity", nazywając ją "finalize-activity"
-8. Zmień kod orkiestrator procesu na:
+8. Dodaj wymagana bibliotekę instrukcją:
+   ```
+        npm install durable-functions
+   ```
+9.  Zmień kod orkiestrator procesu na:
    ```
        const df = require("durable-functions");
        module.exports = df.orchestrator(function* (context) {
@@ -25,7 +29,7 @@ Zakres ćwiczenia:
            return outputs;
        });
    ```
-9. Zmień plik host.json, ustawiając w extension nazwe polaczenia do storage wykorzytywnego dla durable functions (jest to etykieta!)
+10. Zmień plik host.json, ustawiając w extension nazwe polaczenia do storage wykorzytywnego dla durable functions (jest to etykieta!)
     ```
         "extensions": {
             "durableTask": {
@@ -35,7 +39,7 @@ Zakres ćwiczenia:
             }
         }
     ```
-10. Utwórz plik konfiguracji lokalnej local.settings.json (w głównym katalogu projektu) z zawartością definiującą adres storage:
+11. Utwórz plik konfiguracji lokalnej local.settings.json (w głównym katalogu projektu) z zawartością definiującą adres storage:
     ```
         {
             "IsEncrypted": false,
@@ -45,7 +49,7 @@ Zakres ćwiczenia:
             }
         }
     ```
-11. Dodaj do funkcji post-one inicjowanie procesu (dodane const df oraz kod od const client = df.getClient(context); ):
+12. Dodaj do funkcji post-one inicjowanie procesu (dodane const df oraz kod od const client = df.getClient(context); ):
     ```
         const { TableClient } = require("@azure/data-tables");
         const { DefaultAzureCredential } = require("@azure/identity");
@@ -90,7 +94,7 @@ Zakres ćwiczenia:
             }
         }
     ```
-12. Aby móc wywołać start procesu dodaj do bindingów funkcji post-one następujący binding:
+13. Aby móc wywołać start procesu dodaj do bindingów funkcji post-one następujący binding:
     ```
     {
       "name": "starter",
@@ -98,10 +102,10 @@ Zakres ćwiczenia:
       "direction": "in"
     }
     ```
-13. Uruchom funkcję, startując wyświetlone zostają funkcję w projekcie:
+14. Uruchom funkcję, startując wyświetlone zostają funkcję w projekcie:
      ![Start](images/functions/ex5/function-started.png)
 
-14. Wywołaj metode POST /users (funkcja post-one), powinieneś w logu zobaczyc komunikaty związane z wywoływaniem procesu:
+15. Wywołaj metode POST /users (funkcja post-one), powinieneś w logu zobaczyc komunikaty związane z wywoływaniem procesu:
     ```
         [2023-04-18T09:25:37.640Z] Executing 'Functions.post-one' (Reason='This function was programmatically called via the host APIs.', Id=773c6ee1-24da-4f87-892a-8073fe100878)
         [2023-04-18T09:25:37.645Z] JavaScript HTTP trigger function processed a request.
@@ -119,8 +123,8 @@ Zakres ćwiczenia:
         [2023-04-18T09:25:38.518Z] Executing 'Functions.on-boarding-orchestrator' (Reason='(null)', Id=046e4ce4-0e60-4083-8b0d-a594390263e3)
         [2023-04-18T09:25:38.525Z] Executed 'Functions.on-boarding-orchestrator' (Succeeded, Id=046e4ce4-0e60-4083-8b0d-a594390263e3, Duration=7ms)
     ```
-15. Uzyskalismy działający proces, chociaż jeszcze nic nie robi :)
-16. Zmień kod orkiestratora aby przekazywac parametry do activity oraz symulowa dłuższy czas pracy:
+16. Uzyskalismy działający proces, chociaż jeszcze nic nie robi :)
+17. Zmień kod orkiestratora aby przekazywac parametry do activity oraz symulowa dłuższy czas pracy:
     ```
         const df = require("durable-functions");
         const moment = require('moment');
@@ -139,7 +143,7 @@ Zakres ćwiczenia:
         });
     ```
 
-17. Zmień kod check-customer-activity:
+18. Zmień kod check-customer-activity:
     ```
         const { TableClient } = require("@azure/data-tables");
         const { DefaultAzureCredential } = require("@azure/identity");
