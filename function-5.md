@@ -15,11 +15,11 @@ Zakres ćwiczenia:
 5. Powstał kod naszego orkiestratora, przejrzyj plik index.js w katalogu "on-boarding-orchestrator"
 6. Utwórz kolejną funkcję, tym razem "Durable Functions activity", nazywając ją "check-customer-activity"
 7. I utwórz następną funkcję "Durable Functions activity", nazywając ją "finalize-activity"
-8. Dodaj wymagana bibliotekę instrukcją:
+8. Dodaj wymaganą bibliotekę instrukcją:
    ```
         npm install durable-functions
    ```
-9.  Zmień kod orkiestrator procesu na:
+9.  Zmień kod orkiestratora procesu na:
    ```
        const df = require("durable-functions");
        module.exports = df.orchestrator(function* (context) {
