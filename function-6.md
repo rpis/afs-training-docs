@@ -93,6 +93,6 @@ Zakres ćwiczenia:
                 return "Finalize executed";
             };
         ```
-    10. Uruchom funkcję, zalóż postem lub poprzez kolejkę użytkonika i sprawdz czy pojawiła się wiadomość w kolejce "on-boarding-completed"
+    10. Uruchom funkcję, zalóż postem lub poprzez kolejkę użytkownika i sprawdz czy pojawiła się wiadomość w kolejce "on-boarding-completed"
     
 
