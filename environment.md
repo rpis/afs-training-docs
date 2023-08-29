@@ -35,13 +35,13 @@ Pracuj na otwartym w przeglądarce środowisku
         sudo apt-get update
         sudo apt-get install azure-functions-core-tools-4
     ```
-4. Zmień wersję node na 18 (azure core tools w tym momencie nie pracują na 19) (niezbędne tylko dla środowiska dla funkcji)
+4. [Opcjonalne gdy azure core tools nie obsługuje domyślnej wersji node] Zmień wersję node na 18 (lub inna akceptowaną przez azure core tools) (niezbędne tylko dla środowiska dla funkcji)
     ```
         nvm install 18
         nvm use 18
     ```
-5. Sprawdz wersję node komendą node --version, powinna zostać pokazana v18.x
+5. [Opcjonalne gdy azure core tools nie obsługuje domyślnej wersji node]Sprawdz wersję node komendą node --version, powinna zostać pokazana v18.x
 
 Twoje środowisko jest gotowe do pracy
 
-Uwaga : Po każdym uruchomieniu środowiska należy wybrać wersję Node instrukcją "nvm use 18"
+[Opcjonalne gdy azure core tools nie obsługuje domyślnej wersji node]  Uwaga : Po każdym uruchomieniu środowiska należy wybrać wersję Node instrukcją "nvm use 18"

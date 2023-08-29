@@ -7,18 +7,18 @@ Zakres ćwiczenia:
 ![Zakres](images/functions/ex6/AFS-Queue.drawio.png)
 
 
-1. Utwórz nową funmckcję, tym razem wybierjąc "Azure Queue Storage trigger"
+1. Utwórz nową funkcję, tym razem wybierjąc "Azure Queue Storage trigger"
 2. Nazwij ją "queue-user-input-trigger"
-3. ZWybierz zdefiniowaną wcześniej lokalizację AzureWebJobsStorage
+3. Wybierz zdefiniowaną wcześniej lokalizację AzureWebJobsStorage
 4. Nazwij kolejkę z której będziemy korzytali "users-input"
-5. Zostanie następnie utworzona funckja z kodem jedynie logującym dane wejściowe
+5. Zostanie następnie utworzona funkcja z kodem jedynie logującym dane wejściowe
 6. Przetestuj dzialanie:
    1. Uruchom funkcję
-   2. W "Portalu Azure" znajdz podpięyty storage account i przejdź do "Queues"
+   2. W "Portalu Azure" znajdz podpięty storage account i przejdź do "Queues"
    3. Zalóż kolejkę o nazie "users-input"
    4. Wyślij testową wiadomoś do kolejki (dowolną)
    5. Treś wiadomości zobaczysz w logach funkcji
-7. Zmień kod funckji queue-user-input-trigger na:
+7. Zmień kod funkcji queue-user-input-trigger na:
     ```
         const { TableClient } = require("@azure/data-tables");
         const { DefaultAzureCredential } = require("@azure/identity");
@@ -63,7 +63,7 @@ Zakres ćwiczenia:
         }
 
    ```
-9. Uruchom funckję
+9. Uruchom funkcję
 10. Prześlij wiadomośc do kolejki w postaci body z usługi restowej post-one
 11. Sprawdz czy został wywołany zapis, proces, zobacz w bazie czy pojawiła się encja
 12. Dodaj powiadomienia na kolejce o zakończeniu procesowania
