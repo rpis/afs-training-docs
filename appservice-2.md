@@ -20,7 +20,7 @@
    ```
         const { CosmosClient } = require("@azure/cosmos");
         const http = require("http");
-        const port = process.env.PORT || 3000
+        const port = process.env.PORT || 8080
 
         let container = null;
         const cosmosClient = new CosmosClient(

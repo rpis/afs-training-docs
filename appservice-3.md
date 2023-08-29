@@ -146,7 +146,7 @@
         const { CosmosClient } = require("@azure/cosmos");
         const { DefaultAzureCredential } = require("@azure/identity");
         const http = require("http");
-        const port = process.env.PORT || 3000
+        const port = process.env.PORT || 8080
 
         let container = null;
         const cosmosClient = new CosmosClient({
@@ -214,14 +214,15 @@
         });
    ```
 
-7. Uruchom kod lokalnie i sprawdź poprawność działania
-8.  Wdróż na Azure i sprawdz czy działa i jaki uzyskamy komunikat błędu.
-9.  Uaktywnij System assigned w swoim App Service (ustaw na ON i zapisz). Po zapisie zobaczysz Principal ID
-10. Dodaj utworzoną grupe do powyższego principala, jeżeli nie zamykałeś codespace to możesz ustawić principalId=[YOUR PRINCIPAL ID] i wykonać:
+7. Zmien zmienną COSMOSDB_CONNECTION_STRING wskazując na bezpośredni adres Cosmos DB
+8. Uruchom kod lokalnie i sprawdź poprawność działania
+9.  Wdróż na Azure i sprawdz czy działa i jaki uzyskamy komunikat błędu.
+10.  Uaktywnij System assigned w swoim App Service (ustaw na ON i zapisz). Po zapisie zobaczysz Principal ID
+11. Dodaj utworzoną grupe do powyższego principala, jeżeli nie zamykałeś codespace to możesz ustawić principalId=[YOUR PRINCIPAL ID] i wykonać:
        
         ```
             az cosmosdb sql role assignment create --account-name $accountName --resource-group $resourceGroupName --scope "/" --principal-id $principalId --role-definition-id $roleId 
         ```
 
-11. Zmien COSMOSDB_CONNECTION_STRING w "Application Settings"
-12. Wykonaj restart App Service i sprawdź działanie
+12. Zmien COSMOSDB_CONNECTION_STRING w "Application Settings"
+13. Wykonaj restart App Service i sprawdź działanie
