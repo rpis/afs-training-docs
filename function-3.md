@@ -58,12 +58,11 @@
         1.  Znajdz wykorzytywany storage account i wejdz na zakładkę "Access Control"
         2.  Przejdz na zakładę "Role Assignment"
         3.  Kliknij "Add", wybierając "Add role assignment"
-        4.  Znajdz prawo "Storage Account Contributor", zaznacz na liscie i przejdz dalej ![Choose role](images/functions/ex3/add-role-name.png)
+        4.  Znajdz prawo "Storage Table Data Contributor", zaznacz na liscie i przejdz dalej ![Choose role](images/functions/ex3/add-role-name.png)
         5.  Kliknij "Select member"i odfiltruj po nazwie zdefiniowanej w Ad aplikacji ![Select members](images/functions/ex3/select-members.png), zaznaczamy i potwierdzmy wybór
         6.  Potwierdź za pomocą "Review + assign", ponownie potwierdzamy
         7.  Po chwili zobaczysz na liście utworzone powiązanie roli
-        8.  Powtórz czynności dodając role "Storage Table Data Contributor"
-        9.  Powtórz czynności dodając role "Storage Blob Data Owner", w tym wypadku potwierź również condition nie zmieniając nic
+        8.  Powtórz czynności dodając role "Storage Table Data Reader"
     11. Uruchom funkcję i potwierdź działanie lokalne
     12. Przygotuj funcji w Azurze do użycia "system identity"
         1. W portalu azure znajdź swoją funkcję, wybierz "Identity" i na zakładce "System assigned" ustaw na ON
