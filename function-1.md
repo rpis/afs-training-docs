@@ -3,13 +3,14 @@
 2. Mając uruchomione środowisko utworzymy w ramach naszego worskapce projekt funkcji
    1. Użyj skrótu ctrl-shift-p, zostanie wyświetlona paleta ![Palette](images/environment/new-function-project.png)
    2. Odfiltruj zadania dotyczące funcjji wpiskując func itp.
-   3. Wybierz "Azure Function: Create Function"
-   4. Wybierz aktualny katalog jako katalog tworzoneje funkcji ![Folder](images/functions/create-project.png)
+   3. Wybierz "Azure Function: Create New Project"
+   4. Wybierz aktualny katalog jako katalog tworzonego projektu ![Folder](images/functions/create-project.png)
    5. Wybierz język JavaSript
-   6. Wybierz Http trigger jako template dla pierwszej tworzoenj funkcji
-   7. Nazwij funkcje get-all (lub jak chcesz)
-   8. Ustaw poziom autoryzacji jako Anonymous
-   9. Po wykonaniu powyższych czynności zostanie uzupełniona zawartość projektu ![Workspace Content](images/functions/create-workspace-content.png)
+   6. Wybierz w następnym kroku Model v3!
+   7. Wybierz Http trigger jako template dla pierwszej tworzoenj funkcji
+   8. Nazwij funkcje get-all (lub jak chcesz)
+   9. Ustaw poziom autoryzacji jako Anonymous
+   10. Po wykonaniu powyższych czynności zostanie uzupełniona zawartość projektu ![Workspace Content](images/functions/create-workspace-content.png)
 
 3. Otwórz plik index.js z katalogu get-all (lub innego odpwiadającego nazwie Twojej funkcji). Została stworzona podstawowa funkcja
    
