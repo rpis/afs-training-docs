@@ -4,15 +4,15 @@
    1. Otwórz rozszerzenie dla azure
    2. Kliknij na "Storage accounts" i wybierz "Create new storege account"
    3. Wprowadz nazwę wybranaą przez Ciebie, pamiętaj że możesz używać tylko małych liter i numerów - nazwa musi być unikalna globalnie wiec możesz dodać swój prefiks (inicjały?)
-   4. Wybierz lokalizację dla storage account i zatwierdz
-   5. Po chwili zasób zostanie załozony i będzie widoczny na liście zasobów ![Lista zasobów](images/functions/ex2/create-storage.png)
-   6. Dodaj uprawnienie "Storage Table Data Contributor" dla swojego użytkonika:
+   4. Wybierz lokalizację dla storage account i zatwierdź
+   5. Po chwili zasób zostanie założony i będzie widoczny na liście zasobów ![Lista zasobów](images/functions/ex2/create-storage.png)
+   6. Dodaj uprawnienie "Storage Table Data Contributor" dla swojego użytkownika:
    
-        1.  Znajdz wykorzytywany storage account w portalu Azure i wejdz na zakładkę "Access Control"
+        1.  Znajdz wykorzystywany storage account w portalu Azure i wejdź na zakładkę "Access Control"
         2.  Przejdz na zakładę "Role Assignment"
         3.  Kliknij "Add", wybierając "Add role assignment"
-        4.  Znajdz prawo "Storage Table Data Contributor", zaznacz na liscie i przejdz dalej ![Choose role](images/functions/ex3/add-role-name.png)
-        5.  Kliknij "Select member"i odfiltruj po nazwie swojego konta administratora ![Select members](images/functions/ex3/select-members.png), zaznaczamy i potwierdzmy wybór
+        4.  Znajdz prawo "Storage Table Data Contributor", zaznacz na liscie i przejdź dalej ![Choose role](images/functions/ex3/add-role-name.png)
+        5.  Kliknij "Select member"i odfiltruj po nazwie swojego konta administratora ![Select members](images/functions/ex3/select-members.png), zaznaczamy i potwierdzamy wybór
         6.  Potwierdź za pomocą "Review + assign", ponownie potwierdzamy
         7.  Po chwili zobaczysz na liście utworzone powiązanie roli
    
